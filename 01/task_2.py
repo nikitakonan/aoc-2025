@@ -20,12 +20,11 @@ class Locker:
   def get_code(self) -> int:
     return self.code
 
-with open('./01/log.txt', 'w') as log_file:
-  with open('./01/input.txt', 'r') as f: 
-    locker = Locker()
+with open('./01/input.txt', 'r') as f: 
+  locker = Locker()
 
-    for line in f:
-      locker.process_instruction(line.strip())
+  for line in f:
+    locker.process_instruction(line.strip())
       
-    print(locker.get_code())
+  print(locker.get_code())
 
